@@ -1,0 +1,18 @@
+# Core Framework
+streamlit>=1.22.0
+
+# API Clients
+groq>=0.4.0
+supabase>=1.0.3
+
+# Data Processing
+numpy>=1.24.0
+requests>=2.31.0
+
+# Document Parsing
+
+PyPDF2>=3.0.0
+python-docx>=0.8.11
+
+# Utilities
+python-dotenv>=1.0.0
