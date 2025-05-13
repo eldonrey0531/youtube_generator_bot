@@ -1,8 +1,7 @@
 # Core Framework
-streamlit>=1.22.0
 
 # API Clients
-groq>=0.4.0
+groq
 supabase>=1.0.3
 
 # Data Processing
