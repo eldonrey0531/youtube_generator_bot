@@ -417,8 +417,8 @@ def generate_embedding_with_retry(text: str, max_retries: int = MAX_RETRIES) -> 
             response = requests.post(
                 "https://api.jina.ai/v1/embeddings",
                 headers=headers,
-                json=payload
-            )
+                json=payload, 
+            timeout=60)
             
             if response.status_code != 200:
                 raise Exception(f"Jina API error: {response.status_code} - {response.text}")
@@ -488,8 +488,8 @@ def rerank_results(query: str, initial_results: List[Dict], limit: int = 3) -> L
         response = requests.post(
             "https://api.jina.ai/v1/rerank",
             headers=headers,
-            json=payload
-        )
+            json=payload, 
+        timeout=60)
         
         if response.status_code != 200:
             print(f"Reranking failed: {response.status_code} - {response.text}")
